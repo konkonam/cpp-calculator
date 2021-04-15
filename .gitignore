@@ -4,15 +4,20 @@
 .vs
 
 # Folders
-/cmake-build-debug/
+/Testing/
+/cmake-build-*/
 /CMakeFiles/
 /build/
 /bin/
+/coverage/
 
 # Files
 cmake_install.cmake
 CMakeCache.txt
 Makefile
+
+# File types
+*.cbp
 
 # Mac files
 .DS_Store

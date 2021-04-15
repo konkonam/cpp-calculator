@@ -6,13 +6,13 @@ A rudimentary c++ calculator made from scratch, nothing fancy
 
 ### CMake
 
-Build the project
+Create the project cmake files
 
 `cmake .`
 
-Assemble the executable
+Build the executable(s)
 
-`make`
+`make` (or `cmake --build .`)
 
 ## Run
 
