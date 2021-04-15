@@ -1,0 +1,18 @@
+# IDE settings / project folder
+.idea
+.vscode
+.vs
+
+# Folders
+/cmake-build-debug/
+/CMakeFiles/
+/build/
+/bin/
+
+# Files
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+
+# Mac files
+.DS_Store
