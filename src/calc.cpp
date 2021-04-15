@@ -1,8 +1,6 @@
 #include "calc.hpp"
 
 #include <string>
-#include <iostream>
-#include <sstream>
 
 /**
  * Mathematical operator used for addition
@@ -46,8 +44,6 @@ float calc::calculateFromExpression(const std::string& expression) {
 
     int* numbers = numbersFromString(expression);
 
-    std::cout << numbers[0] << " " << numbers[1] << std::endl;
-
     auto a = (float) numbers[0];
     auto b = (float) numbers[1];
 
@@ -89,33 +85,30 @@ char calc::findOperator(const std::string& string) {
 }
 
 /**
- * Finds all numbers in a string
+ * Finds all integers in a string
  *
  * @param string The given string
  *
  * @return the array of numbers
  */
 int* calc::numbersFromString(const std::string& string) {
-    size_t size = 2;
-    int *numbers = (int*) std::malloc(size);
+    unsigned int numbersLength = 0;
+    int* numbers = (int*) std::malloc(2 * sizeof(int));
 
-    std::stringstream stream;
-    stream << string;
+    std::string number;
 
-    std::string temp;
-    int temp_int;
-
-    int i = 0;
-    while (!stream.eof()) {
-
-        stream >> temp;
-
-        if (std::stringstream(temp) >> temp_int) {
-            numbers[i] = temp_int;
-            i++;
+    for (char i : string) {
+        if (std::isdigit(i)) {
+            number += i;
         }
+        else if (!number.empty()) {
+            numbers[numbersLength++] = std::stoi(number);
+            number = "";
+        }
+    }
 
-        temp = "";
+    if (!number.empty()) {
+        numbers[numbersLength] = std::stoi(number);
     }
 
     return numbers;
