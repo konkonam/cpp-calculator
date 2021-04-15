@@ -11,11 +11,19 @@
 int main() {
     std::string expression;
 
-    std::getline(std::cin, expression);
+    std::cout << "C++ Calculator" << std::endl << "Type \"exit\" to quit" << std::endl << std::endl;
 
-    int result = calc::calculateFromExpression(expression);
+    while (true) {
+        std::getline(std::cin, expression);
 
-    std::cout << std::endl << "Result: " << result << std::endl;
+        std::size_t exit = expression.find("exit");
 
-    return EXIT_SUCCESS;
+        if (exit != std::string::npos) {
+            return EXIT_SUCCESS;
+        }
+
+        int result = calc::calculateFromExpression(expression);
+
+        std::cout << result << std::endl;
+    }
 }

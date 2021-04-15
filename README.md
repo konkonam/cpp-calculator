@@ -30,6 +30,8 @@ Available operators: +, -, *, /
 
 Example inputs: "2 + 3", "21 / 7"
 
+Exit the calculator by typing "exit" into the prompt.
+
 ### Known issues
 
 This calculator is only usable for integer math, so when dividing, only numbers that divide to a whole number can be used.
