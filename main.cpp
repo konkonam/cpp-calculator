@@ -22,7 +22,7 @@ int main() {
             return EXIT_SUCCESS;
         }
 
-        int result = calc::calculateFromExpression(expression);
+        float result = calc::calculateFromExpression(expression);
 
         std::cout << result << std::endl;
     }

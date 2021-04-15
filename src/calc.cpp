@@ -41,13 +41,15 @@ const char calc::OPERATORS[4] = {
  *
  * @return the calculated result
  */
-int calc::calculateFromExpression(const std::string& expression) {
+float calc::calculateFromExpression(const std::string& expression) {
     char mathOperator = findOperator(expression);
 
     int* numbers = numbersFromString(expression);
 
-    int a = numbers[0];
-    int b = numbers[1];
+    std::cout << numbers[0] << " " << numbers[1] << std::endl;
+
+    auto a = (float) numbers[0];
+    auto b = (float) numbers[1];
 
     std::free(numbers);
 
@@ -127,7 +129,7 @@ int* calc::numbersFromString(const std::string& string) {
  *
  * @return calculated result
  */
-int calc::add(int a, int b) {
+float calc::add(float a, float b) {
     return a + b;
 }
 
@@ -139,7 +141,7 @@ int calc::add(int a, int b) {
  *
  * @return calculated result
  */
-int calc::subtract(int a, int b) {
+float calc::subtract(float a, float b) {
     return a - b;
 }
 
@@ -151,7 +153,7 @@ int calc::subtract(int a, int b) {
  *
  * @return calculated result
  */
-int calc::multiply(int a, int b) {
+float calc::multiply(float a, float b) {
     return a * b;
 }
 
@@ -163,6 +165,6 @@ int calc::multiply(int a, int b) {
  *
  * @return calculated result
  */
-int calc::divide(int a, int b) {
+float calc::divide(float a, float b) {
     return a / b;
 }

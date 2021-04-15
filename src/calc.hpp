@@ -5,21 +5,21 @@
 
 class calc {
     public:
-        static int calculateFromExpression(const std::string& expression);
+        static float calculateFromExpression(const std::string& expression);
 
     private:
         static char findOperator(const std::string &expression);
         static int* numbersFromString(const std::string& expression);
 
-        static int add(int a, int b);
-        static int subtract(int a, int b);
-        static int multiply(int a, int b);
-        static int divide(int a, int b);
+        static float add(float a, float b);
+        static float subtract(float a, float b);
+        static float multiply(float a, float b);
+        static float divide(float a, float b);
 
-        static const char OPERATOR_DIVIDE;
-        static const char OPERATOR_MULTIPLY;
-        static const char OPERATOR_SUBTRACT;
         static const char OPERATOR_ADD;
+        static const char OPERATOR_SUBTRACT;
+        static const char OPERATOR_MULTIPLY;
+        static const char OPERATOR_DIVIDE;
 
         static const char OPERATORS[4];
 };
