@@ -21,3 +21,15 @@ Build the executable(s)
 Run the calculator
 
 `./build/cppcalc`
+
+## Usage
+
+Enter any 2 whole numbers and a mathematical operator to calculate a result.
+
+Available operators: +, -, *, /
+
+Example inputs: "2 + 3", "21 / 7"
+
+### Known issues
+
+This calculator is only usable for integer math, so when dividing, only numbers that divide to a whole number can be used.

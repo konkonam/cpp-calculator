@@ -1,8 +1,0 @@
-#ifndef CPP_CALCULATOR_MAIN_HPP
-#define CPP_CALCULATOR_MAIN_HPP
-
-class main {
-
-};
-
-#endif //CPP_CALCULATOR_MAIN_HPP

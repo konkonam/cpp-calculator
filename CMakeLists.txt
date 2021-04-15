@@ -8,7 +8,6 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/build)
 
 add_executable(cppcalc
         main.cpp
-        main.hpp
         src/calc.cpp
         src/calc.hpp
 )
