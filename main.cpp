@@ -18,7 +18,7 @@ int main() {
 
         std::size_t exit = expression.find("exit");
 
-        if (exit != std::string::npos) {
+        if (!std::cin.good() || exit != std::string::npos) {
             return EXIT_SUCCESS;
         }
 
