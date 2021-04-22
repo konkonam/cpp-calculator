@@ -1,6 +1,6 @@
 # C++ Calculator
 
-A rudimentary c++ calculator made from scratch, nothing fancy
+A rudimentary string based calculator
 
 ## Build
 
@@ -28,7 +28,7 @@ Enter any 2 whole numbers and a mathematical operator to calculate a result.
 
 Available operators: +, -, *, /
 
-Example inputs: "2 + 3", "21 / 7"
+Example inputs: "8 - 6", "2 Midgets + 3 Apes", "20 Dollars / 3 People"
 
 Exit the calculator by typing "exit" into the prompt.
 
