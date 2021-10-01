@@ -13,7 +13,7 @@ int main() {
 
     std::cout << "C++ Calculator" << std::endl << "Type \"exit\" to quit" << std::endl << std::endl;
 
-    while (true) {
+    loop:
         std::getline(std::cin, expression);
 
         std::size_t exit = expression.find("exit");
@@ -25,5 +25,5 @@ int main() {
         float result = calc::calculateFromExpression(expression);
 
         std::cout << result << std::endl;
-    }
+    goto loop;
 }
